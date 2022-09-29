@@ -1,0 +1,30 @@
+﻿@page
+@model RazorPizzeria.Pages.OrdersModel
+
+@{
+
+}
+
+<h3>Orders</h3>
+<hr />
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Pizza</th>
+			<th>Price</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		@foreach (var item in @Model.orders)
+		{
+			<tr>
+				<td>@item.Id</td>
+				<td>@item.PizzaName</td>
+				<td>@item.BasePrice</td>
+			</tr>
+		}
+	</tbody>
+</table>
